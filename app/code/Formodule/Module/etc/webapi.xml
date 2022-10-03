@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route method="GET" url="/V1/new">
+        <service class="Formodule\Module\Api\NewMagentoRepoInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="GET" url="/V1/new/:id">
+        <service class="Formodule\Module\Api\NewMagentoRepoInterface" method="getElementById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="POST" url="/V1/new">
+        <service class="Formodule\Module\Api\NewMagentoRepoInterface" method="saveElement"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="PUT" url="/V1/new/:id">
+        <service class="Formodule\Module\Api\NewMagentoRepoInterface" method="saveElement"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="DELETE" url="/V1/new/:id">
+        <service class="Formodule\Module\Api\NewMagentoRepoInterface" method="deleteById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route method="GET" url="/V1/new/search">
+        <service class="Formodule\Module\Api\NewMagentoRepoInterface" method="getSearchResultsList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+</routes>

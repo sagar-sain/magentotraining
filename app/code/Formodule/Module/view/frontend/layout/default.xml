@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Formodule\Module\Block\Link" name="add-new-header-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Form</argument>
+                    <argument name="path" xsi:type="string" translate="true">form/index/index</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="top.links">
+            <block class="Formodule\Module\Block\Link" name="add-new-top-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Form</argument>
+                    <argument name="path" xsi:type="string" translate="true">form/index/index</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

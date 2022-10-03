@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <!-- for add new tab in Magento2 system configuration section -->
+        <tab id="webkul" translate="label" sortOrder="10">
+            <label>Example</label>
+        </tab>
+        <!-- for create section -->
+        <section id="sleekaccordian" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Sleek Accordian</label>
+            <!-- Assign section to tab -->
+            <tab>webkul</tab>
+            <resource>Magetop_Helloworld::configuration</resource>
+            <!-- create group for fields in section -->
+            <group id="parameters" translate="label" type="text"  sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Parameters</label>
+                <!-- create text type field -->
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="dropdown_example" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Dropdown with custom source model example</label>
+                    <source_model>Magetop\Helloworld\Model\Config\Source\Custom</source_model>
+                </field>
+                <field id="textarea_example" translate="label" type="textarea" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Textarea example</label>
+                </field>
+                <field id="radio_example" translate="label" type="radio" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Radio</label>
+
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

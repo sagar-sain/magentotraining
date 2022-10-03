@@ -1,0 +1,34 @@
+   <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+
+       <fieldset name="web">
+           <argument name="data" xsi:type="array">
+               <item name="config" xsi:type="array">
+                   <item name="label" xsi:type="string" translate="true">Enter Details</item>
+                   <item name="sortOrder" xsi:type="number">1</item>
+               </item>
+           </argument>
+
+           <!--Field sets can be nested -->
+           <fieldset name="store">
+               <argument name="data" xsi:type="array">
+                   <item name="config" xsi:type="array">
+                       <item name="label" xsi:type="string" translate="true">Nested fieldset Label as displayed in UI</item>
+                       <item name="collapsible" xsi:type="boolean">true</item>
+                       <!-- Nesting level, the value should correspond to the actual nesting level in the config xml file. For the top field set level = 0 -->
+                       <item name="level" xsi:type="number">2</item>
+                   </item>
+               </argument>
+               <field name="set1" formElement="input">
+                   <argument name="data" xsi:type="array">
+                       <item name="config" xsi:type="array">
+                           <item name="label" xsi:type="boolean">true</item>
+                           <item name="template" xsi:type="string">page</item>
+
+                       </item>
+                   </argument>
+               </field>
+           </fieldset>
+       </fieldset>
+   </form>
+

@@ -1,0 +1,9 @@
+<h1>User Data</h1>
+<?php $number = $this->getRequest()->getParam('number');
+$email = $this->getRequest()->getParam('email');
+$message = $this->getRequest()->getParam('message');
+
+echo "<h3>Mobile Number = $number </h3>";
+echo "<h3>Email = $email </h3>";
+echo "<h3>Your Message = $message </h3>";
+?>
